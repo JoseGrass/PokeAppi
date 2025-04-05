@@ -1,7 +1,7 @@
 function mostrarLista(listaPokes){
     const app = document.getElementById("app");
     
-    let Pokes = " ";
+    let Pokes = "";
 
     const seccion = document.createElement("section");
     seccion.classList.add("c-lista"); 
