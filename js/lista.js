@@ -12,15 +12,16 @@ function mostrarLista(listaPokes){
     buscador.type = "text"
     buscador.addEventListener("input", buscarPoke);
 */
-listaPokes.forEach(pokemon =>{
-        let id = listaPokes[i].url.split("/")[6];
-        Pokes += `
-        <div class="c-lista-pokemon poke-${id}" onclick="mostrarDetalle('${listaPokes[i].name}')">
-            <p>#${id}</p>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png" width="auto" height="60" loading="lazy" alt="${listaPokes[i].name}">
-            <p>${listaPokes[i].name}</p>
-        </div>`;
-    }).join('');
+Pokes = listaPokes.map(pokemon => {
+    let id = pokemon.url.split("/")[6];
+    return `
+    <div class="c-lista-pokemon poke-${id}" onclick="mostrarDetalle('${pokemon.name}')">
+        <p>#${id}</p>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png" width="auto" height="60" loading="lazy" alt="${pokemon.name}">
+        <p>${pokemon.name}</p>
+    </div>`;
+}).join('');
+
     seccion.innerHTML = Pokes;
     
     /*app.appendChild(buscador);*/
