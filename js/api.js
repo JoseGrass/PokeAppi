@@ -8,3 +8,5 @@ async function General() {
     const infoPokes = await conexionLista();
     mostrarLista(infoPokes) 
 }
+
+General();
