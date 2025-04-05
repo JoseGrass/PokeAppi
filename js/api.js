@@ -6,5 +6,5 @@ async function  conexionLista() {
 
 async function General() {
     const infoPokes = await conexionLista();
-    mostrarLista(infoPokes.results) 
+    mostrarLista(infoPokes) 
 }
