@@ -5,6 +5,7 @@ async function  conexionLista() {
 }
 
 async function General() {
+    app.innerHTML = "";
     const infoPokes = await conexionLista();
     mostrarLista(infoPokes) 
 }
