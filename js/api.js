@@ -9,4 +9,3 @@ async function General() {
     mostrarLista(infoPokes) 
 }
 
-General();
